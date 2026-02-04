@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      {
+        // array loop
+        const array = ["Anang ", "Fatkurrohman", "United"];
+
+        array.forEach(function (value, index) {
+          console.info(`${index} : ${value}`);
+        });
+
+        array.forEach((value, index) => console.info(`${index} : ${value}`));
+        array.forEach((value) => console.info(value));
+      }
+    </script>
+  </body>
+</html>
