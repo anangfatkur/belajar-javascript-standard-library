@@ -38,6 +38,15 @@
 
         console.info(Date.now());
       }
+
+      {
+        //date parsing
+        const time = Date.parse("2026-02-07T08:45:45.123+07:00");
+        console.info(time);
+
+        const date = new Date(time);
+        console.info(date);
+      }
     </script>
   </body>
 </html>
