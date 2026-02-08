@@ -14,6 +14,20 @@
         const regex2 = new RegExp("anang");
         const regex3 = new RegExp("fatkurrohman");
       }
+      {
+        // test regex
+
+        const name = "anang fatkurrohman anang fatkurrohman";
+        const regex = /anang/;
+
+        const result = regex.exec(name);
+        console.info(result);
+        console.info(regex.exec("tidak ada"));
+
+        const test = regex.test(name);
+        console.info(test);
+        console.info(regex.test("tidak ada"));
+      }
     </script>
   </body>
 </html>
