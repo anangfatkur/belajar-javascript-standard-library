@@ -28,6 +28,21 @@
         console.info(test);
         console.info(regex.test("tidak ada"));
       }
+      {
+        //regex modifier
+
+        const name = " anang fatkurrohman\nAnang Fatkurrohman\nAmad Dialo";
+        const regex1 = /anang/gi;
+        const regex2 = /Fatkurrohman/gi;
+
+        let result;
+        while ((result = regex1.exec(name)) !== null) {
+          console.info(result);
+        }
+        while ((result = regex2.exec(name)) !== null) {
+          console.info(result);
+        }
+      }
     </script>
   </body>
 </html>
