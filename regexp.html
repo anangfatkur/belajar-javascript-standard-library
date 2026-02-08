@@ -53,6 +53,16 @@
           console.info(result);
         }
       }
+      {
+        const name = "anang anung aning, anong";
+
+        console.info(name.match(/an[auioe]/gi)); // ['ana', 'anu', 'ani', 'ano']
+        console.info(name.search(/an[auioe]/gi)); // 0
+        //replace semua karena regex
+        console.info(name.replace(/an[auioe]/i, "kamu")); //kamung anung aning, anong
+        console.info(name.replaceAll(/an[auioe]/gi, "kamu")); //kamung kamung kamung, kamung
+        console.info(name.split(/a/gi)); // ['', 'n', 'ng ', 'nung ', 'ning, ', 'nong']
+      }
     </script>
   </body>
 </html>
