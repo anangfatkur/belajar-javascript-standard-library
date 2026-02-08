@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encode</title>
+  </head>
+  <body>
+    <script>
+      {
+        // encode uri dan decode uri
+
+        const url = "http:///www.contoh.com/?name=Anang&Fatkurrohman=United";
+        console.info(url);
+
+        const encoded = encodeURI(url);
+        console.info(encoded);
+
+        const decode = decodeURI(encoded);
+        console.info(decode);
+      }
+    </script>
+  </body>
+</html>
