@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proxy</title>
+  </head>
+  <body>
+    <script>
+      //  <!--Note : Pembuatan proxy perlu menggunakan handler dan di dalam handler bisa membuat function-->
+
+      const target = {
+        middleName: "United",
+      };
+
+      const handler = {
+        get: function (target, property) {
+          return target[property];
+        },
+        set: function (target, property, value) {
+          target[property] = value;
+        },
+      };
+
+      const proxy = new Proxy(target, handler);
+      proxy.firstName = "Anang";
+      proxy.lastName = "Fatkurrohman";
+
+      console.info(proxy.firstName);
+      console.info(proxy.middleName);
+      console.info(proxy.lastName);
+      console.info(target);
+    </script>
+  </body>
+</html>
