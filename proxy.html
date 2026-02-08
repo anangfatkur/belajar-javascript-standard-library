@@ -15,16 +15,23 @@
 
       const handler = {
         get: function (target, property) {
+          console.info(`Access Property : ${property}`);
           return target[property];
         },
         set: function (target, property, value) {
-          target[property] = value;
+          console.info(`Change Property : ${property} : ${value}`);
+          if (value == null) {
+            target[property] = "";
+            // throw new Error("Tidak Boleh null");
+          } else {
+            target[property] = value;
+          }
         },
       };
 
       const proxy = new Proxy(target, handler);
       proxy.firstName = "Anang";
-      proxy.lastName = "Fatkurrohman";
+      proxy.lastName = null;
 
       console.info(proxy.firstName);
       console.info(proxy.middleName);
