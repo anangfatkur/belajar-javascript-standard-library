@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbol</title>
+  </head>
+  <body>
+    <script>
+      const firstName = Symbol("firstName");
+      const lastName = Symbol("lastName");
+
+      const person = {};
+      person[firstName] = "Anang";
+      person[lastName] = "Fatkurrohman";
+
+      console.info(person);
+    </script>
+  </body>
+</html>
