@@ -31,8 +31,8 @@
       {
         //regex modifier
 
-        const name = " anang fatkurrohman\nAnang Fatkurrohman\nAmad Dialo";
-        const regex1 = /anang/gi;
+        const name = "anang fatkurrohman\nAnang Fatkurrohman\nAmad Dialo";
+        const regex1 = /^a.g/gim;
         const regex2 = /Fatkurrohman/gi;
 
         let result;
@@ -40,6 +40,16 @@
           console.info(result);
         }
         while ((result = regex2.exec(name)) !== null) {
+          console.info(result);
+        }
+      }
+
+      {
+        //advanced regex
+        const regex = /an[aioeo]/gi;
+
+        const name = "anang anung aning, anong";
+        while ((result = regex.exec(name)) !== null) {
           console.info(result);
         }
       }
