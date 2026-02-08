@@ -19,6 +19,19 @@
         const decode = decodeURI(encoded);
         console.info(decode);
       }
+
+      {
+        // encode uri component dan decode uri component
+        const value = "Anang&Fatkurrohman=United";
+        const url = "http:///www.contoh.com/?name=";
+        console.info(url + value);
+
+        const encoded = encodeURIComponent(url);
+        console.info(url + encoded);
+
+        const decode = decodeURIComponent(encoded);
+        console.info(url + decode);
+      }
     </script>
   </body>
 </html>
